@@ -120,7 +120,7 @@ def front_back(str):
   return str[-1] + middle + str[0]
 
 print(front_back('code') )
-pritn(front_back('a') )
+print(front_back('a') )
 print(front_back('ab') )
 
 
