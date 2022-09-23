@@ -1,4 +1,4 @@
 
 # Ameer Alnasser
-## Workshop - SoftDevAA
+## Workshop
 ### SoftDev 2022-2023
