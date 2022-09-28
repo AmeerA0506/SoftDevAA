@@ -20,7 +20,6 @@ OPS Summary:
 '''
 
 import random as rng
-from re import I, M
 
 #krewes = {1:['A', 'B', 'C'], 2:['D', 'E', 'F']}
 krewes = {
