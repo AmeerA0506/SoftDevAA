@@ -26,9 +26,9 @@ krewes = {
          }
 look="2$$$Daniel$$$Porky@@@2$$$Maya$$$Logan@@@7$$$Sam$$$Otto@@@2$$$Anthony$$$Bart@@@2$$$Aaron$$$munchy@@@7$$$Nada$$$Ray@@@7$$$Jeremy$$$Parky@@@8$$$Wilson$$$bear@@@2$$$Talia$$$Dname@@@8$$$Shreya$$$Bob@@@8$$$Kevin$$$Bob@@@8$$$Verit$$$Nibbles@@@8$$$Shinji$$$Will Smith@@@8$$$Brian$$$Duc@@@8$$$Donald$$$Klein@@@8$$$Sebastian$$$Deno@@@2$$$Ryan$$$<T>@@@8$$$Brian$$$Dolphin@@@8$$$Jeffery$$$Mathias@@@7$$$William$$$Steve@@@2$$$Julia$$$Poof@@@8$$$Aahan$$$Spikes@@@7$$$Gitae$$$Kwak@@@7$$$James$$$Steve@@@7$$$Lauren$$$wagyu@@@2$$$William$$$cs50 ddb@@@2$$$Samuel$$$Arnold@@@2$$$Anson$$$Faizem@@@7$$$David$$$Eugene@@@7$$$Samantha$$$Tim@@@7$$$Anna$$$Flippers@@@7$$$Karen$$$Grape@@@7$$$Mahir$$$Nemo@@@2$$$Andrew$$$potatoe@@@8$$$Gordon$$$cheems@@@8$$$Yat Long$$$Reginald@@@2$$$Vansh$$$Berry@@@7$$$Ian$$$hydro@@@8$$$Samson$$$Doggo@@@8$$$April$$$horanghae@@@2$$$Daniel$$$Kosha@@@7$$$Gabriel$$$Moony@@@8$$$Jusin$$$Alfred@@@2$$$Ziying$$$Pinky@@@2$$$Raven$$$Bobby@@@8$$$Ameer$$$turtleboi@@@7$$$Prattay$$$Winnie@@@8$$$Ryan$$$Luigi@@@2$$$Fang Min$$$Cat@@@7$$$Russell$$$Bob 3.0@@@8$$$Erica Li$$$Hugo@@@"
 
-def find_devo(krewes):
-    keys = list(krewes)
-    index = rng.randint(0, len(keys)-1)
+def find_devo(krewes): #copied from 04
+    keys = list(krewes) 
+    index = rng.randint(0, len(keys)-1) #0 indexed python, so minus one
     key = keys[index]
     rando_value = rng.randint(0, len(krewes[key])-1)
     return str("Your random devo is "+str(krewes[key][rando_value][0]) + " of period " + str(key))+ ". Their ducky is "+str(krewes[key][rando_value][1])
@@ -36,33 +36,20 @@ def find_devo(krewes):
 def decipher(look):
     dict={2:[],7:[],8:[]}
     sha=look
-    while len(sha)>1:
-        key=int(sha[0:sha.find("$")])
-        sha = sha[sha.find("$")+3:]
+    while len(sha)>1:# we go iterating our input in segments, removing each segment 
+        key=int(sha[0:sha.find("$")]) #first character is the period , which also serves as the key for our input
+        sha = sha[sha.find("$")+3:] #we went forward from the 3 dollar sign
         name = sha[:sha.find("$")]
         sha = sha[sha.find("$")+3:]
         ducky = sha[:sha.find("@")]
         sha = sha[sha.find("@")+3:]
-        dict[key].append([name, ducky])
+        dict[key].append([name, ducky]) # add an entry into our list 
     return dict
 
-def decipher2():
+def decipher2(): # wanted entryless one
     dict={2:[],7:[],8:[]}
     file1 = open("krewes.txt",'r')
     sha=str(file1.readline())
-
-    while len(sha)>1:
-        key=int(sha[0:sha.find("$")])
-        sha = sha[sha.find("$")+3:]
-        name = sha[:sha.find("$")]
-        sha = sha[sha.find("$")+3:]
-        ducky = sha[:sha.find("@")]
-        sha = sha[sha.find("@")+3:]
-        dict[key].append([name, ducky])
-    return dict
-def decipher(look):
-    dict={2:[],7:[],8:[]}
-    sha=look
 
     while len(sha)>1:
         key=int(sha[0:sha.find("$")])
