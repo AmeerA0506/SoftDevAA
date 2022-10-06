@@ -5,18 +5,33 @@ K07 -- Web dev *
 2022-10-4
 time spent: 0.5hrs
 '''
-
-
+import random as rng
 from flask import Flask
-
 app = Flask(__name__) # Q0: Where have you seen similar syntax in other langs?
-
-
-
 @app.route("/") # Q1: What points of reference do you have for meaning of '/'?
-def hello_world():
-    print(__name__) # Q2: Where will this print to? Q3: What will it print?
-    return "No hablo queso!"  # Q4: Will this appear anywhere? How u know?
+
+def occupation():
+    file1 = open("occupations.csv",'r')
+    file1.readline() #we dont like the first line, it hates us 
+    sha= file1.readlines()
+    sha = sha[:-1] # we want to remove the last entry, which is the total 
+    dictionary = {}
+    for e in sha:
+        if e[0] == '"':
+            dictionary[e[1:e.find('",')]] = float(e[e.find('",')+2:len(e)-1]) # if theres a comma in the key, we want to acknowledge it as a dif situation 
+        else:
+            dictionary[e[0:e.find(',')]] = float(e[e.find(',')+1:len(e)-1]) 
+    dic = dictionary
+
+    occlist = []
+    for key in dic:
+        number = int((dic[key])*10)
+        for x in range(number):
+            occlist.append(key) # we wanted to find a way to make it random
+    index = rng.randint(0, len(occlist)-1)
+    return "Your randomly selected occupation is " + occlist[index] + " with a " + str(dic[occlist[index]]) + "% chance."
+        
+
 app.run()  # Q5: Where have you seen similar constructs in other languages?
 
 

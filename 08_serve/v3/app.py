@@ -1,6 +1,8 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+# Young Lions Crying At War:: Ameer Alnasser, Yat Long Chan, Wilson Mach
+# SoftDev pd 8
+# K08: Flask stuff
+# 2022-10-6
+
 
 from flask import Flask
 app = Flask(__name__) #create instance of class Flask
@@ -8,8 +10,9 @@ app = Flask(__name__) #create instance of class Flask
 @app.route("/")       #assign fxn to route
 def hello_world():
     print("about to print __name__...")
-    print(__name__)   #where will this go?
+    print(__name__)   #where will this go? the terminal :D
     return "No hablo queso!"
 
 app.debug = True
 app.run()
+# debugger has a pin that isn't unique per instance of webpage
