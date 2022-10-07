@@ -29,7 +29,7 @@ def occupation():
         for x in range(number):
             occlist.append(key) # we wanted to find a way to make it random
     index = rng.randint(0, len(occlist)-1)
-    return "Your randomly selected occupation is " + occlist[index] + " with a " + str(dic[occlist[index]]) + "% chance."
+    return "Your randomly selected occupation is " + occlist[index] + " with a " + str(dic[occlist[index]]) + "% chance." + , occupations.csv
         
 
 app.run()  # Q5: Where have you seen similar constructs in other languages?
