@@ -11,7 +11,6 @@ app = Flask(__name__) #create instance of class Flask
 def hello_world():
     print("the __name__ of this module is... ")
     print(__name__)
-    print("hi")
     return "No hablo queso!"
 
 if __name__ == "__main__":  # true if this file NOT imported
