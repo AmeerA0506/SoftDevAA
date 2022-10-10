@@ -8,8 +8,8 @@ time spent: 0.5hrs
 import csv
 import random as rng
 from flask import Flask
-app = Flask(__name__) # Q0: Where have you seen similar syntax in other langs?
-@app.route("/") # Q1: What points of reference do you have for meaning of '/'?
+app = Flask(__name__) 
+@app.route("/") 
 
 def occupation():
     file1 = open("occupations.csv",'r')
@@ -36,11 +36,10 @@ def occupation():
     for x in dic:
         output+= x + "<br>"
     return "<h2> Young Lions Crying At War:: Ameer Alnasser, Yat Long Chan, Wilson Mach</h2>"\
-           +"Your randomly selected occupation is " + occlist[index] \
-+ " with a " + str(dic[occlist[index]]) + "% chance." + "<br>"+"<br>"\
-+"<h1> Occupations </h1>" + output
+           +"Your randomly selected occupation is " \
+           + "<a href=" + '''"'''+"https://www.google.com/search?q="+occlist[index] + '''"''' \
+           + " target='_blank'>" + occlist[index] + "</a> with a " + str(dic[occlist[index]]) + "% chance." + "<br>"+"<br>"\
+           +"<h1> Occupations </h1>" + output
         
 app.debug = True        # enable auto-reload upon code change, auto reloading the terminal and not the webpage
-
-app.run()  # Q5: Where have you seen similar constructs in other languages?
-
+app.run()  
