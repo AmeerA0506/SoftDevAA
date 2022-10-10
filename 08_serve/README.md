@@ -1,7 +1,7 @@
-# Young Lions Crying At War:: Ameer Alnasser, Yat Long Chan, Wilson Mach
-# SoftDev pd 8
-# K08: Flask stuff
-# 2022-10-6
+## Young Lions Crying At War:: Ameer Alnasser, Yat Long Chan, Wilson Mach
+## SoftDev pd 8
+## K08: Flask stuff
+## 2022-10-6
 
 ### PREDICTIONS:
 - v0: We predict that __name__ and "No hablo queso!" would be on the webpage
