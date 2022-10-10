@@ -14,3 +14,11 @@
 	* outcome: we would still need ot save our file as well as refresh our webpage, but we dont need to terminate
 - v4: We predict that there will be a debug still running as no files are iportant
 	* outcome: we was right
+### DISCO:
+- discovered where flask is run (through our localhost, 127.0.0.1:5000
+- we learned that there was an autorefresh if debug was on, meaning we wouldnt have to terminate each session
+- we learned that the debug code would not change per instance of webpage
+- 
+### QCC
+- can we change the port its run through/does it matter?
+- how do we have multiple functions run in app.py
