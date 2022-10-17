@@ -29,6 +29,7 @@ Results:
 DISCO:
 - A HTTP 405 error is thrown when GET is excluded from method field in app.route()
 - the args dictionary is updated with user inputs
+- special chars are stored in forms dict w/ '\' 
 - the request method isn't needed to load and use webpage in browser, but stores user inputs.
 - When the methods are included in app.route(), we cannot access the values stored in request.args
 
