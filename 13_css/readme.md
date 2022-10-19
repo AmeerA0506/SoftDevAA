@@ -2,6 +2,7 @@ Foo Bar:: Ameer Alnasser, Wan Ying Li, Kevin Wang
 SoftDev
 Oct 2022
 simple demo of CSS via NOT flask
+time spent: 1.3hrs
 
 #Discoveries:
 * padding adds "comfort" for tags, giving them space to breathe a little bit
