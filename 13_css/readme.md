@@ -3,6 +3,7 @@ SoftDev
 Oct 2022
 simple demo of CSS via NOT flask
 time spent: 1.3hrs
+Credits to WillyVee's StuyCS Ipsum generator
 
 #Discoveries:
 * padding adds "comfort" for tags, giving them space to breathe a little bit
