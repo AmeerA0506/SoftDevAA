@@ -17,8 +17,8 @@
 * or  
 *  ``` $ sqlite3 ```  
 ``` <sqlite> .OPEN <name>```
-    - <name> could be anything, creates and/or opens file with <name> (no file extension)
-    - Should add <sqlite> before the input bar
+    - ```<name> ``` could be anything, creates and/or opens file with ```<name>``` (no file extension)
+    - Should add ```<sqlite>``` before the input bar
 * ```CREATE table <tablename>(<col_name1> <param1>, <col_name2> <param2>....<col_name n> <param n>);```
     - Note: from all known documentation, no further columns can be appended
     - possible parameters: TEXT (put in quotes, either single or double), INTEGER, BLOB (any data type), REAL (float)
