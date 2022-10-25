@@ -15,7 +15,7 @@
 ## Basic commands
 * ```$ sqlite3 <name>```
 or  
-```$ sqlite3    
+```$ sqlite3 \n   
 <sqlite3> .OPEN <name>
 ```
     - <name> could be anything, creates file with <name> (no file extension)
