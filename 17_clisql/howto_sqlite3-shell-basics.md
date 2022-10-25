@@ -22,17 +22,17 @@
  3. ```select * from <tablename>;```
     - returns the content of table.
     - asterisk means all columns, could be replaced with a singular column name or multiple separated by commas
-
+    
 ### What to do
-    * Remember to add a semi colon at the end of each line
+  * Remember to add a semi colon at the end of each line
         - If not, don't sweat. the line should appear as --->. You can add a semi colon and it would work as intended. Without a semicolon, a line can be infinitely long, as signified by the --->.
-    * Follow our basic commands TO A TEE!!!
+  * Follow our basic commands TO A TEE!!!
 
 ### What not to do
-    * Forget ur semicolon lulz
+  * Forget ur semicolon lulz
 
 ### Fun things we learned
-    * A file is created with the name provided in the first line of our Basic Commands
+   * A file is created with the name provided in the first line of our Basic Commands
     * A Sqlite file can have multiple tables (as it is an RDB)
     * .mode <format> can help format the output of reading the file.
       - these formats could be quote, line, list, box, table, etc.
