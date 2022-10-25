@@ -41,7 +41,7 @@
     * spam ctrl-C to terminate session
 
 ### QCC:
-    * what file is created after opening a session? we noticed that if we cat the file, it has undecodable chars
+  * what file is created after opening a session? we noticed that if we cat the file, it has undecodable chars
 ### Resources
 * [SQLITE documentation](https://www.sqlite.org/cli.html)
 * [Mykolyk readme for SQLITE](https://github.com/stuy-softdev/notes-and-code/blob/main/smpl/k17-18sqlite/readme.md)
