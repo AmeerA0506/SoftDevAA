@@ -8,18 +8,18 @@
 
 - SQLITE3 should be pre-installed on a local Mac or Linux computer. if not installed, ssh into lab computer
 
-* 0. ```$ sqlite3 <name>```  
-* or  
-*  ``` $ sqlite3 ```  
+ 0. ```$ sqlite3 <name>```  
+ or  
+  ``` $ sqlite3 ```  
 ``` <sqlite> .OPEN <name>```
     - ```<name> ``` could be anything, creates and/or opens file with ```<name>``` (no file extension)
     - Should add ```<sqlite>``` before the input bar
-* 1. ```CREATE table <tablename>(<col_name1> <param1>, <col_name2> <param2>....<col_name n> <param n>);```
+ 1. ```CREATE table <tablename>(<col_name1> <param1>, <col_name2> <param2>....<col_name n> <param n>);```
     - Note: from all known documentation, no further columns can be appended
     - possible parameters: TEXT (put in quotes, either single or double), INTEGER, BLOB (any data type), REAL (float)
-* 2. ``` insert into <tablename> VALUES(<Val1>, <Val2>....<ValN>);```
+ 2. ``` insert into <tablename> VALUES(<Val1>, <Val2>....<ValN>);```
     - should insert a value into table if the parameters are true
-* 3. ```select * from <tablename>;```
+ 3. ```select * from <tablename>;```
     - returns the content of table.
     - asterisk means all columns, could be replaced with a singular column name or multiple separated by commas
 
