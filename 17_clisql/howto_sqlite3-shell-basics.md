@@ -37,3 +37,6 @@ or
 * We relearned how to ssh into the CSLab
 * Commands are NOT CASE SENSITIVE!!
 * spam ctrl-C to terminate session
+
+## QCC:
+* what file is created after opening a session? we noticed that if we cat the file, it has undecodable chars
