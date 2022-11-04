@@ -11,8 +11,8 @@ from flask import request           #facilitate form submission
 
 app = Flask(__name__)    #create Flask object
 
-username="Kwa"
-password="kwa"
+CORRECT_username="Kwa"
+CORRECT_password="kwa"
 '''
 trioTASK:
 ~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
@@ -28,7 +28,7 @@ PROTIP: Insert your own in-line comments
   your future self and/or current teammates
    understand what is going on.
 '''
-from flask import session
+from flask import session, redirect, url_for
 
 # Set the secret key to some random bytes. Keep this really secret!
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -36,26 +36,34 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 @app.route('/')
 def index():
     if 'username' in session:
-        return f'Logged in as {session["username"]}'
-    return 'You are not logged in'
+        return render_template("home.html", username=session["username"], logged_in=True)
+    else:
+        return render_template("home.html", logged_in=False)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        session['username'] = request.form['username']
-        return redirect(url_for('index'))
-    return '''
-        <form method="post">
-            <p><input type=text name=username>
-            <p><input type=submit value=Login>
-        </form>
-    '''
+        if (CORRECT_username == request.form["username"] and CORRECT_password == request.form["password"]):
+            session['username'] = request.form['username']
+            return redirect(url_for('index'))
+        else:
+            return "wrong username or password"
+        
+    else:
+        if 'username' in session:
+            return redirect(url_for('index'))
+        else:
+            return render_template("login.html", logged_in=False)
+
+        
 
 @app.route('/logout')
 def logout():
     # remove the username from the session if it's there
     session.pop('username', None)
     return redirect(url_for('index'))
+
+"""
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
     print("\n\n\n")
@@ -87,7 +95,7 @@ def authenticate():
     print(request.headers)
     return "Waaaa hooo HAAAH"  #response to a form submission
 
-
+"""
     
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
