@@ -1,20 +1,12 @@
+<!--
+Foo Bar:: Ameer Alnasser, Wan Ying Li, Kevin Wang
+SoftDev
+k19 -- username/password authentication
+2022-11-05
+time spent: 0.8 hrs
+-->
+
 <!DOCTYPE html>
-<!-- 
-  Clyde 'Thluffy' Sinclair
-  SoftDev
-  Oct 2022
-
-     simple demo of HTML forms via Flask
-     
-     trioTASK:
-     If any member of team has forms experience, let their know-how OSMOTE.
-     If no one does, seek external assistance.
-     
-     PROTIP: Revisit code from intro if you have it.
-     Peruse this code together and discuss how it should work,
-       in conjunction with the back end apparatus.
- -->
-
 
 <html>
 
@@ -23,15 +15,25 @@
   </head>
 
   <body>
+      <p>Foo Bar:: Ameer Alnasser, Wan Ying Li, Kevin Wang</p>
       <form method="post">
         <label>Username:</label>
-        <input type=text name=username>
+        <input type=text name=username value="{{ username }}">
+
+
         <br>
         <label>Password:</label>
         <input type=text name=password>
         <br>
 
+        
         <input type=submit value=Login>
+
+        <p>username: lol</p>
+        <p>password: lol</p>
+        
+        <p>{{error_message}}</p>
+
       </form>
 
   </body>
