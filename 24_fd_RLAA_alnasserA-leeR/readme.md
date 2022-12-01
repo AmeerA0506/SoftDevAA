@@ -4,12 +4,12 @@ Soft Dev
 2022-11-30
 time spent: 1 hr
 
-DISCO:
+## DISCO:
 
-QCC: 
+## QCC: 
 
-q0:  1
+### q0:  1
   
-q0b: primary documentation of foundation
+### q0b: primary documentation of foundation
 
-q1: bootstrap
+### q1: bootstrap
