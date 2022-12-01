@@ -1,10 +1,10 @@
 ## Team
 
-Racing Leopards Aggressively Addicted: Ameer Alnasser, Ryan Lee
-K23 - Bootstrap Features
-Soft Dev
-2022-11-29
-time spent: 1 hr
+Racing Leopards Aggressively Addicted: Ameer Alnasser, Ryan Lee  
+K23 - Bootstrap Features  
+Soft Dev  
+2022-11-29  
+time spent: 1 hr  
 
 
 ## DISCO:
