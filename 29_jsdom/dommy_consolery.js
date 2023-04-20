@@ -113,6 +113,12 @@ const myFxn = (a, b) => {
 const myFunn =()=> {
   var a = getRandomInt(10);
   var b = getRandomInt(10);
+  removeItem(13);
+  removeItem(12);
+  removeItem(11);
+  removeItem(10);
+  removeItem(9);
+
   addItem("a: " + a);
   addItem("b: " + b);
   addItem("gcd(a,b): " + gcd(a,b));
@@ -121,6 +127,15 @@ const myFunn =()=> {
  
   return "successssssss";
 };
+
+const GCF=()=> {
+  var a = getRandomInt(10);
+  var b = getRandomInt(10);
+  addItem("a: " + a);
+  addItem("b: " + b);
+  addItem("gcd(a,b): " + gcd(a,b));
+
+}
 var result = gcd(6,2);
 var dasbut = document.getElementById("b");
 dasbut.addEventListener('click',  myFunn);
