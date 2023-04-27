@@ -46,7 +46,5 @@ var stopIt = () => {
     window.cancelAnimationFrame(requestID);
 }
 
-if (numProcesses == 0) {
     dotButton.addEventListener("click", drawDot);
-} 
     stopButton.addEventListener("click", stopIt);
